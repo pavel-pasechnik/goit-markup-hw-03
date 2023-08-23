@@ -4,15 +4,73 @@ body {
 	background-color: #FFFFFF;
 }
 
+/* Reset styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
 a {
 	text-decoration: none;
 }
 
-li {
-	list-style-type: none;
+img {
+	display: block;
+}
+
+.button {
+	cursor: pointer;
+	border: 0;
+}
+
+.container {
+	max-width: 1158px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 156px;
+	margin-right: 156px;
+}
+
+.section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+header {
+	border-bottom: 1px solid var(--cornflower, #E7E9FC);
 }
 
 /* Naw bar */
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
 nav a .logo {
 	color: #2E2F42;
@@ -22,6 +80,7 @@ nav a .logo {
 	line-height: 1.2;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
+	margin-right: 76px;
 }
 
 nav .logo {
@@ -32,9 +91,20 @@ nav .logo {
 	line-height: 1.17;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
+	padding-top: 25.5px;
+	padding-bottom: 25.5px;
 }
 
-nav ul li {
+.main-nav {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	align-items: center;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.main nav ul li {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5;
@@ -53,6 +123,11 @@ nav ul li {
 
 /* Contacts */
 
+.contacts ul {
+	display: flex;
+	gap: 40px;
+}
+
 address {
 	font-style: normal;
 }
@@ -63,6 +138,8 @@ address ul li a {
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+	padding-top: 24px;
+	padding-bottom: 24px;
 }
 
 /* Address on hover */
@@ -75,8 +152,17 @@ address ul li a:focus {
 /* Hero section */
 
 .solutions {
-	justify-content: center;
 	background: #2E2F42;
+}
+
+.solutions .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 68px;
+	padding-left: 316px;
+	padding-right: 316px;
 }
 
 .solutions-header {
@@ -86,6 +172,7 @@ address ul li a:focus {
 	font-weight: 700;
 	line-height: 1.07;
 	letter-spacing: 0.02em;
+	padding-bottom: 48px;
 }
 
 .button {
@@ -96,7 +183,10 @@ address ul li a:focus {
 	font-weight: 500;
 	line-height: 1.5;
 	letter-spacing: 0.04em;
-	cursor: pointer;
+	padding: 16px 32px;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+	margin-bottom: 66px;
 }
 
 /* Button on hover */
@@ -109,12 +199,23 @@ address ul li a:focus {
 
 /* Features */
 
+.features .container ul {
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+}
+
+.feature-header {
+	display: none;
+}
+
 .features ul li .features-header {
 	color: #2E2F42;
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+	padding-bottom: 8px;
 }
 
 .features .feature-item {
@@ -124,6 +225,7 @@ address ul li a:focus {
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+	width: 264px;
 }
 
 /* Team */
@@ -140,10 +242,20 @@ address ul li a:focus {
 	line-height: 1.11;
 	letter-spacing: 0.02em;
 	text-transform: capitalize;
+	padding-bottom: 72px;
+}
+
+.team ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .team ul .team-item {
 	background-color: #FFFFFF;
+	border-radius: 0px 0px 4px 4px;
+	background: var(--white, #FFF);
+	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team ul li .team-item-header {
@@ -153,6 +265,8 @@ address ul li a:focus {
 	font-weight: 500;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+	padding-top: 32px;
+	padding-bottom: 8px;
 
 }
 
@@ -163,6 +277,7 @@ address ul li a:focus {
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+	padding-bottom: 32px;
 }
 
 /* Portfolio */
@@ -175,15 +290,28 @@ address ul li a:focus {
 	line-height: 1.11;
 	letter-spacing: 0.02em;
 	text-transform: capitalize;
+	padding-bottom: 72px;
+}
+
+.portfolio ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	column-gap: 24px;
+	row-gap: 48px;
 }
 
 .portfolio ul li .portfolio-item-header {
-	justify-content: center;
 	color: #2E2F42;
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+	border-left: 1px solid #E7E9FC;
+	border-right: 1px solid #E7E9FC;
+	padding-top: 32px;
+	padding-bottom: 8px;
+	padding-left: 16px;
 }
 
 .portfolio ul li .portfolio-item-paragraph {
@@ -192,6 +320,11 @@ address ul li a:focus {
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+	border-left: 1px solid #E7E9FC;
+	border-right: 1px solid #E7E9FC;
+	border-bottom: 1px solid #E7E9FC;
+	padding-left: 16px;
+	padding-bottom: 32px;
 }
 
 /* Footer */
@@ -201,6 +334,12 @@ address ul li a:focus {
 }
 
 /* Logo */
+
+.footer .container {
+	padding-top: 101.5px;
+	padding-bottom: 100px;
+	;
+}
 
 footer a .logo {
 	color: #F4F4FD;
@@ -228,4 +367,6 @@ footer .footer-paragraph {
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+	padding-top: 17.5px;
+	width: 264px;
 }
