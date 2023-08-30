@@ -40,7 +40,7 @@ img {
 
 .button {
 	cursor: pointer;
-	border: 0;
+	border: none;
 }
 
 .container {
@@ -54,8 +54,10 @@ img {
 	padding-bottom: 120px;
 }
 
+/* Header */
+
 .header {
-	border-bottom: 1px solid var(--cornflower, #E7E9FC);
+	border-bottom: 1px solid #E7E9FC;
 	margin: 0 auto;
 	padding: 0 15px
 }
@@ -112,6 +114,7 @@ nav .logo {
 }
 
 .nav-item-link {
+	display: block;
 	color: #2e2f42;
 	padding: 24px 0;
 }
